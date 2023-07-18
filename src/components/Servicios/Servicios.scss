@@ -1,0 +1,42 @@
+.imagenes__servicios {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -5px;
+    margin-top: 50px;
+
+}
+
+.titulo__servicios {
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    font-size: 50px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+}
+
+.servicios__imagenes{
+  margin-right: 80px;
+  border-radius: 8px;
+}
+
+h1 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 3s forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

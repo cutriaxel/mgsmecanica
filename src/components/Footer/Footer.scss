@@ -1,0 +1,54 @@
+footer {
+  background: #0BD8A2;
+  padding: 1.22222rem 0;
+  position: relative;
+  z-index: 4;
+  margin-top: 35px;
+  border-top: 2px solid rgba(44, 43, 43, 0.5);
+}
+
+.flexgrid {box-sizing: border-box;
+display: flex;
+justify-content: space-around;
+flex: 0 1 auto;
+flex-direction: row;
+flex-wrap: wrap;
+list-style: none;
+margin: 0 0 0 -0.55555rem;
+padding: 0;
+width: 100%;}
+
+.texto-footer {
+  display: flex;
+    align-items: center;
+    a{
+      text-decoration: none;
+      color: black;
+     
+    }
+
+    a:visited {
+      color: black; /* O utiliza el color que desees */
+    }
+}
+
+.social-container {
+  display: flex;
+  gap: 18px;
+
+}
+
+
+@media only screen and (min-width: 68.1rem){
+.container {
+    max-width: 66.66667rem;
+}}
+
+
+.container {
+  margin: 0 auto;}
+
+  @media only screen and (min-width: 40.1rem){
+.container {
+    max-width: 95%;
+    padding: 0 0.25rem;}}
