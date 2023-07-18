@@ -4,17 +4,16 @@ import RoomIcon from '@mui/icons-material/Room';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
 
 const Contacto = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Configura los IDs del servicio, plantilla y usuario de EmailJS
     const serviceID = 'service_4kqdpe7';
     const templateID = 'template_arctyif';
     const userID = 'iPWSQWPfSaL4jN89d';
 
-    // Crea un objeto con los datos del formulario
     const formData = {
       nombre: e.target.nombre.value,
       correo: e.target.correo.value,
@@ -23,16 +22,31 @@ const Contacto = () => {
       mensaje: e.target.mensaje.value,
     };
 
-    // Envía los datos del formulario a través de EmailJS
     emailjs.send(serviceID, templateID, formData, userID)
       .then((result) => {
         console.log('Formulario enviado correctamente', result.text);
+
+        // Mostrar Sweet Alert de éxito
+        Swal.fire({
+          icon: 'success',
+          title: '¡Formulario enviado!',
+          text: 'Gracias por contactarnos.',
+          customClass: {
+            popup: "custom-swal",
+          },
+        });
       })
       .catch((error) => {
         console.error('Error al enviar el formulario', error);
+
+        // Mostrar Sweet Alert de error
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Hubo un problema al enviar el formulario. Inténtalo de nuevo más tarde.',
+        });
       });
 
-    // Limpia el formulario después de enviarlo
     e.target.reset();
   };
 

@@ -127,7 +127,7 @@ function NavBar({ handleCloseNavMenu }) {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Instagram">
-              <IconButton component="a" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" sx={{ p: 0 }}>
+              <IconButton component="a" href="https://www.instagram.com/mecanica.mgs/" target="_blank" rel="noopener noreferrer" sx={{ p: 0 }}>
                 <InstagramIcon sx={{ color: 'white', fontSize: '32px' }} />
               </IconButton>
             </Tooltip>
